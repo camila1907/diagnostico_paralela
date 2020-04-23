@@ -1,0 +1,4 @@
+SELECT score name_,start_date, score,avg(score) AS promedio_notas ,std(score) AS desviacion,MIN(score) AS nota_minima, max(score) AS nota_maxima
+from evaluations inner join exams on evaluations.id_exams_fk=exams.id_exams
+inner join courses on exams.id_course_fk=courses.id_courses group by 
+name_ and start_date;
