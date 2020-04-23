@@ -1,0 +1,34 @@
+#include <stdio.h>//libreria
+#include<string>//libreria
+#include <iostream> //libreria
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    if(argc>1){
+    char comparativa;// variable que permitira realizar la comparacion
+    string cadena; //variable recibida
+    
+    cadena=argv[1];
+    int aux=1; //se declara un contador 
+    
+	for(int i=0;i<cadena.length();i++){
+        comparativa=cadena[i];
+        if(comparativa==cadena[i+1]){ //entrar� al ciclo if si es que se cumple la condicion de que letra sea igual al caracter siguiente
+           
+		   aux=aux+1; //contador "aux" aumenta a medida que se cumple la condicion
+        }
+        else{
+                cout<<comparativa<<aux;// permite visualizar la letra junto a la cantidad de veces que se repite
+            
+			aux=1;
+        }
+    }
+    
+    }
+    else{
+               cout<<"Error de ingreso de dato"<<endl;//muestra por pantalla en caso de que el dato no corresponda
+			   cout<<endl;
+    }
+    return 0;
+}
